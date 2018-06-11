@@ -1,0 +1,91 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block scripts
+  script(src='works.bundle.js')
+
+  section.hero
+    .hero-header
+      .hero__links   
+        - 
+          var socials = [
+            ['vk', 'http://vk.com'],
+            ['gh', 'http://gh.com'],
+            ['in', 'http://in.com']]
+        ul.socials
+          each item in socials
+            li.socials__item
+              a(href=`${item[1]}`).socials__link
+                +icon(item[0], 'socials__link-icon')
+
+      .hero__menu
+        a(href="#").hamburger-menu
+        
+    .hero__title
+      .section-title
+        img(src="", alt="").section-title__pic
+      .hero__user
+        .user
+          .user__avatar
+            img.user__avatar-img
+          .user__description
+            .user__name Владимир Астахов
+            .user__info Личный сайт веб разработчика
+
+    .hero__down_btns
+      a(href="#").down-btn
+    
+  section.demo
+    .triangle-page
+      .triangle-page__col
+        svg.triangle.triangle--fill-white  
+      .triangle-page__col
+        svg.triangle.triangle--fill-beige
+    .works__caption
+      .block-title Мои работы
+    .work
+
+  section.reviews
+    .reviews__title
+      .block-title Что обо мне говорят
+    .reviews_content  
+      ul.reviews__list
+        li.reviews__item
+          .review
+            .review__text
+              p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            .review__author
+              .author
+                .author__avatar 
+                  img(src="", alt="").author__pic
+                .author__info  
+                  .author__name Ковальчук Дмитрий
+                  .author__position Основатель Loftschool
+        li.reviews__item
+          .review
+            .review__text
+              p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            .review__author
+              .author
+                .author__avatar 
+                  img(src="", alt="").author__pic
+                .author__info  
+                  .author__name Сабанцев Владимир
+                  .author__position Преподаватель  
+
+    section.contact-form
+      .container 
+        .container__title
+          .block-subtitle Связаться со мной
+        .form
+          form.message-form(action="")
+            each item in [['text', 'Имя','form-name'], ['email', 'Email', 'form-email']]
+              .form__row
+                input.form__input(type=`${item[0]}`, placeholder=`${item[1]}`, id=`${item[2]}`, name=`${item[2]}`)
+            .form__row
+              textarea.form__textarea(name="form-comment", id="form-comment") Ваше сообщение
+            .form__btn
+              button.button(type="submit") Отправить
+              button.button(type="reset") Очистить
