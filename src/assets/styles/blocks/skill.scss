@@ -27,7 +27,12 @@
 }
 
 .skill__title {
+  position: absolute;
+  text-align: center;
   color: $green;
   font-size: 12.82px;
   font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

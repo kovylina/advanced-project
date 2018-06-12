@@ -1,9 +1,10 @@
-body, html {
+body,
+html {
   height: 100%;
 }
 
 body {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.42;
   color: $text-color;
@@ -14,6 +15,7 @@ body {
 .wrapper {
   overflow: hidden;
   min-height: 100%;
+  width: 100%;
   position: relative;
 }
 
@@ -37,12 +39,27 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+li {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   margin: 0;
 }
 
 p {
+  margin: 0;
+  padding: 0;
+}
+
+figure {
   margin: 0;
   padding: 0;
 }

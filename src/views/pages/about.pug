@@ -4,20 +4,19 @@ block variables
   - var title = 'Обо мне'
   - 
     var socials = [
-      ['vk', 'http://vk.com'],
-      ['github', 'http://gh.com'],
-      ['in', 'http://in.com']]  
+      ['vk', 'https://vk.com/tatyana.kovylina'],
+      ['github', 'https://github.com/kovylina']]   
   - 
     var skills = [
-      ['Frontend', [['HTML5', 30], ['CSS3', 50], ['JavaScript&amp;jQuery',70]]],
-      ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js&amp;npm',70], ['Mongo.db',70]]],
+      ['Frontend', [['HTML5', 30], ['CSS3', 50], ['JavaScript & jQuery',70]]],
+      ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js & npm',70], ['Mongo.db',70]]],
       ['WorkFlow', [['Git', 30], ['Gulp', 50], ['Bower',70]]]]    
   - 
     var contacts = [
-        ['skype', 'skype_kdn'], 
-        ['envelope', 'astahov@gmail.com'],
-        ['phone', '+7 931 200 9324'], 
-        ['map_marker', 'г. Новосибирск, ул. Инская, д. 5']]          
+        ['skype', 'kovylina.tatyana'], 
+        ['envelope', 'tkovylina@gmail.com'],
+        ['phone', '+7 911 310 6736'], 
+        ['map_marker', 'г. Мурманск, ул. Шмидта, д. 1, корп. 3']]          
 
 block scripts
   script(src='about.bundle.js')
@@ -44,7 +43,7 @@ block content
           .user__avatar
             +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
           .user__description
-            .user__name Владимир Астахов
+            .user__name Татьяна Ковылина
             .user__info Личный сайт веб разработчика
 
     .hero__down_btns
@@ -54,9 +53,9 @@ block content
   section.about
     .triangle-page
       .triangle-page__col
-        svg.triangle.triangle--fill-white  
+        +icon('triangle_left', 'triangle triangle--fill-light-beige')  
       .triangle-page__col
-        svg.triangle.triangle--fill-beige
+        +icon('triangle_right', 'triangle triangle--fill-beige')
     .about__content
       .about__left
         .about__left-title
@@ -69,13 +68,13 @@ block content
               .user-description__title
                 .block-subtitle Кто я
               .user-description__text.text-content
-                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
+                p Я веб-разработчик из Мурманска. Мне 33 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
       .about__right
         .about__right-title
-          .block-subtitle Чем я могу быть вам полезен
+          .block-subtitle Чем я могу быть вам полезна
         .about__right-description.text-content
-          p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
+          p Больше всего меня привлекает Frontend-разработка, но я также знакома и могу решать несложные задачи на Backend. Но давайте по порядку.
         .about__right-content
           ul.skills-list
             each skillrow in skills

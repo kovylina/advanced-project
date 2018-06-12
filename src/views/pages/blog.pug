@@ -4,9 +4,8 @@ block variables
   - var title = 'Блог'
   - 
     var socials = [
-      ['vk', 'http://vk.com'],
-      ['github', 'http://gh.com'],
-      ['in', 'http://in.com']]  
+      ['vk', 'https://vk.com/tatyana.kovylina'],
+      ['github', 'https://github.com/kovylina']]  
 
 block scripts
   script(src='about.bundle.js')
@@ -35,7 +34,7 @@ block content
           .user__description
             .user__page 
               .block-title Блог
-            .user__info Статьи, которые я написал
+            .user__info Статьи, которые я написала
 
     .hero__down_btns
       a(href="#").down-btn
@@ -44,9 +43,9 @@ block content
   section.blog
     .triangle-page
       .triangle-page__col
-        svg.triangle.triangle--fill-white  
+        +icon('triangle_left', 'triangle triangle--fill-white')  
       .triangle-page__col
-        svg.triangle.triangle--fill-white
+        +icon('triangle_right', 'triangle triangle--fill-white')
 
     .blog__content
       .blog-menu  

@@ -1,5 +1,27 @@
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__list--welcome-page {
+  background-color: $green;
+  .menu__item {
+    flex-grow: 1;
+  }
+  .menu__link {
+    padding: 15px 0;
+    &:hover {
+      background-color: $darkgreen;
+    }
+  }
+}
+
 .menu__item {
-  display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
   &:last-child {
@@ -14,21 +36,15 @@
 .menu__link {
   color: $white;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.menu__link--border-right {
+.menu__item--border-right {
   border-right: 1px solid $light-grey;
   &:last-child {
     border-right: none;
-  }
-}
-
-.menu__link--backgroung-green {
-  padding: 15px 30px;
-  background-color: $green;
-  &:hover {
-    background-color: $darkgreen;
   }
 }

@@ -4,9 +4,8 @@ block variables
   - var title = 'Мои работы'
   - 
     var socials = [
-      ['vk', 'http://vk.com'],
-      ['github', 'http://gh.com'],
-      ['in', 'http://in.com']]  
+      ['vk', 'https://vk.com/tatyana.kovylina'],
+      ['github', 'https://github.com/kovylina']]  
 
 block scripts
   script(src='works.bundle.js')
@@ -33,7 +32,7 @@ block content
           .user__avatar
             +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
           .user__description
-            .user__name Владимир Астахов
+            .user__name Татьяна Ковылина
             .user__info Личный сайт веб разработчика
 
     .hero__down_btns
@@ -43,9 +42,9 @@ block content
   section.demo
     .triangle-page
       .triangle-page__col
-        svg.triangle.triangle--fill-white  
+        +icon('triangle_left', 'triangle triangle--fill-light-beige')  
       .triangle-page__col
-        svg.triangle.triangle--fill-beige
+        +icon('triangle_right', 'triangle triangle--fill-light-beige')
     .works__caption
       .block-title Мои работы
     .work
