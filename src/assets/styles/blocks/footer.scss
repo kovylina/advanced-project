@@ -1,0 +1,24 @@
+.footer {
+  background: $grey;
+  opacity: 0.85;
+}
+
+.footer__row {
+  display: flex;
+  padding: 20px 30px;
+  border-bottom: 1px solid $light-grey;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.footer__col {
+  font-weight: 300;
+  color: #fff;
+  width: 50%;
+  display: flex;
+}
+
+.footer__col--justify_end {
+  justify-content: flex-end;
+}

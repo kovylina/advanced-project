@@ -2,28 +2,29 @@ extends ../auth.layout.pug
 
 block content
   .welcome
-    .welcome__btn
-      a(href="") Авторизоваться
+    .welcome__registration
+      .welcome__btn
+        a(href="").auth-button Авторизоваться
     .welcome__content
       .welcome__user
         .user.user--color-dark
             .user__avatar
-              img.user__avatar-img
+              +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
             .user__description
               .user__name Владимир Астахов
               .user__info Личный сайт веб разработчика
-      .welcome__socials
-        - 
-          var socials = [
-            ['vk', 'http://vk.com'],
-            ['gh', 'http://gh.com'],
-            ['in', 'http://in.com']]
-        +socials(socials, 'socials--fill-green')
+        .welcome__socials
+          - 
+            var socials = [
+              ['vk', 'http://vk.com'],
+              ['github', 'http://gh.com'],
+              ['in', 'http://in.com']]
+          +socials(socials, 'socials--fill-green')
       .welcome__menu
         nav.menu
           ul.menu__list
             each item in [['Мои работы','works.html'], ['Обо мне', 'about.html'], ['Блог','blog.html']]
               li.menu__item
-                a(href=`${item[1]}`).menu__link #{item[0]}
-      .welcome__copyright
-        p &copy; Владимир Астахов | Создано с любовью в Loftschool | 2016
+                a(href=`${item[1]}`).menu__link.menu__link--backgroung-green.menu__link--border-right #{item[0]}
+    .welcome__copyright
+      p &copy; Владимир Астахов | Создано с любовью в Loftschool | 2016

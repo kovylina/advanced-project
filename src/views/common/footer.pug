@@ -3,14 +3,14 @@ footer.footer
     .footer__col
       nav.menu
         ul.menu__list
-          each item in [['Мои работы','works.html'], ['Обо мне', 'about.html'], ['Блог','blog.html']]
-            li.menu__item
+          each item in [['Мои работы','works.html'], ['Обо мне', 'about.html'], ['Блог','blog.html'],['Авторизация', '#']]
+            li.menu__item.menu__item--margin-right
               a(href=`${item[1]}`).menu__link #{item[0]}
     .footer__col.footer__col--justify_end
       - 
         var socials = [
           ['vk', 'http://vk.com'],
-          ['gh', 'http://gh.com'],
+          ['github', 'http://gh.com'],
           ['in', 'http://in.com']]      
       +socials(socials, 'socials--round')
   .footer__row

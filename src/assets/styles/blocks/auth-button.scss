@@ -1,0 +1,14 @@
+.auth-button {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 15px 30px;
+  border: 1px solid $white;
+  border-radius: 5px;
+  background: transparent;
+  &:hover {
+    background: #fff;
+    color: $green;
+  }
+}

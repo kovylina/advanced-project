@@ -1,0 +1,14 @@
+.block-title {
+  font-family: "bernier", Helvetica, sans-serif;
+  font-size: 63px;
+  line-height: 1.42;
+  text-align: center;
+  &:before,
+  &:after {
+    content: "-";
+    display: inline-block;
+    vertical-align: middle;
+    color: $light-grey;
+    margin: 0 20px;
+  }
+}

@@ -1,0 +1,33 @@
+.about__content {
+  display: flex;
+  text-align: center;
+}
+
+.about__left,
+.about__right {
+  width: 50%;
+}
+
+.about__left {
+  background: $white;
+}
+
+.about__right {
+  background: $beige;
+}
+
+.about__left-title {
+  margin-bottom: 55px;
+}
+
+.about__right {
+  padding: 35px;
+}
+
+.about__right-title {
+  margin-bottom: 40px;
+}
+
+.about__right-content {
+  text-align: left;
+}

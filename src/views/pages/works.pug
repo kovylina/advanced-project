@@ -2,18 +2,19 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Мои работы'
+  - 
+    var socials = [
+      ['vk', 'http://vk.com'],
+      ['github', 'http://gh.com'],
+      ['in', 'http://in.com']]  
 
 block scripts
   script(src='works.bundle.js')
 
+block content
   section.hero
-    .hero-header
+    .hero__header
       .hero__links   
-        - 
-          var socials = [
-            ['vk', 'http://vk.com'],
-            ['gh', 'http://gh.com'],
-            ['in', 'http://in.com']]
         ul.socials
           each item in socials
             li.socials__item
@@ -22,6 +23,7 @@ block scripts
 
       .hero__menu
         a(href="#").hamburger-menu
+          +icon('hamburger', 'hamburger-menu__img')
         
     .hero__title
       .section-title
@@ -29,13 +31,14 @@ block scripts
       .hero__user
         .user
           .user__avatar
-            img.user__avatar-img
+            +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
           .user__description
             .user__name Владимир Астахов
             .user__info Личный сайт веб разработчика
 
     .hero__down_btns
       a(href="#").down-btn
+        +icon('arrow_down', 'down-btn__img')
     
   section.demo
     .triangle-page

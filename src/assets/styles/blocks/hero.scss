@@ -1,0 +1,24 @@
+.hero {
+  background: url("assets/images/bg-about.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+
+.hero__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.hero__down_btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.hero__title {
+  margin-bottom: 120px;
+}
