@@ -1,1 +1,2 @@
-import "./modules/example";
+import "./modules/map";
+import "./modules/skills";

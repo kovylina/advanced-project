@@ -10,6 +10,8 @@
 .about__left,
 .about__right {
   width: 50%;
+  min-width: 300px;
+  padding-bottom: 40px;
 }
 
 .about__left {
@@ -22,6 +24,7 @@
 
 .about__left-title {
   margin-bottom: 55px;
+  text-align: center;
 }
 
 .about__right {

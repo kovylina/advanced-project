@@ -25,8 +25,8 @@ block content
           +icon('hamburger', 'hamburger-menu__img')
         
     .hero__title
-      .section-title
-        img(src="", alt="").section-title__pic
+      +icon('portfolio_header', 'hero__title-pic')
+
       .hero__user
         .user
           .user__avatar
@@ -45,23 +45,27 @@ block content
         +icon('triangle_left', 'triangle triangle--fill-light-beige')  
       .triangle-page__col
         +icon('triangle_right', 'triangle triangle--fill-light-beige')
-    .works__caption
+    .demo__caption
       .block-title Мои работы
-    .work
+        +icon('works_header', 'block-title__subtitle')
+    
+    .slider-container 
+      #slider-component
 
   section.reviews
     .reviews__title
       .block-title Что обо мне говорят
-    .reviews_content  
+        +icon('about_header', 'block-title__subtitle')
+    .reviews__content  
       ul.reviews__list
         li.reviews__item
           .review
             .review__text
-              p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              p Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
             .review__author
               .author
                 .author__avatar 
-                  img(src="", alt="").author__pic
+                  +image('review-1.png', 'Ковальчук Дмитрий', 'author__pic')
                 .author__info  
                   .author__name Ковальчук Дмитрий
                   .author__position Основатель Loftschool
@@ -72,22 +76,26 @@ block content
             .review__author
               .author
                 .author__avatar 
-                  img(src="", alt="").author__pic
+                  +image('review-2.jpg', 'Сабанцев Владимир', 'author__pic')
                 .author__info  
                   .author__name Сабанцев Владимир
                   .author__position Преподаватель  
 
-    section.contact-form
-      .container 
-        .container__title
+    .contact-form
+      .form
+        .form__title
           .block-subtitle Связаться со мной
-        .form
-          form.message-form(action="")
+        form.form__form(action="")
+          .form__edit
             each item in [['text', 'Имя','form-name'], ['email', 'Email', 'form-email']]
               .form__row
                 input.form__input(type=`${item[0]}`, placeholder=`${item[1]}`, id=`${item[2]}`, name=`${item[2]}`)
             .form__row
               textarea.form__textarea(name="form-comment", id="form-comment") Ваше сообщение
-            .form__btn
-              button.button(type="submit") Отправить
-              button.button(type="reset") Очистить
+          .form__btn
+            button.form__button.form__button--border-right(type="submit") Отправить
+            button.form__button(type="reset") Очистить
+    
+    .reviews__up-btns
+      a(href="#").up-btn
+        +icon('arrow_down', 'up-btn__img')

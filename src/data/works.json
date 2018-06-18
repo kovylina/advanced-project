@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Сайт фитнесс-клуба \"Афродита\"",
+    "skills": "HTML, CSS",
+    "photo": "/assets/images/content/slider/work_1.png",
+    "link": "//luzdosol.tmweb.ru/"
+  },
+  {
+    "id": 2,
+    "title": "Сайт сети кафе \"Mr. Burger\"",
+    "skills": "HTML, CSS, JavaScript",
+    "photo": "/assets/images/content/slider/work_2.png",
+    "link": "//kovylina.github.io/burger/"
+  },
+  {
+    "id": 3,
+    "title": "Сайт-портфолио",
+    "skills": "HTML, CSS, JavaScript",
+    "photo": "/assets/images/content/slider/work_2.png",
+    "link": "//kovylina.github.io/advanced-project/"
+  }
+]

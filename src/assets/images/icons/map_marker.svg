@@ -1,13 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="15.151px" height="21.654px" viewBox="0 0 15.151 21.654" enable-background="new 0 0 15.151 21.654" xml:space="preserve">
-<g>
-	<path d="M11.004,7.835c0-1.883-1.538-3.414-3.43-3.414c-1.889,0-3.431,1.531-3.431,3.414
-		c0,1.884,1.542,3.419,3.431,3.419C9.466,11.254,11.004,9.719,11.004,7.835z"/>
-	<path d="M7.574,21.654l1.388-1.817c1.455-1.925,6.189-8.469,6.189-12.049C15.151,3.132,12.106,0,7.574,0
-		C3.045,0,0,3.132,0,7.788c0,3.854,5.56,11.223,6.192,12.049L7.574,21.654z M2.792,7.835c0-2.628,2.146-4.77,4.782-4.77
-		c2.64,0,4.785,2.142,4.785,4.77c0,2.63-2.146,4.771-4.785,4.771C4.938,12.605,2.792,10.465,2.792,7.835z"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="40" viewBox="0 0 30 40">
+  <image id="map_marker" width="30" height="40" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAoCAMAAADezbogAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABWVBMVEUAAAAAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAvaMAAAAAkyaHAAAAcXRSTlMAATN+ttz5tQRo12c52Tj8bEP9vb4L48haEfRfB+vwMQpqsNMJBk3+REfnk5xOTCQT7hLSeHOjuJDPze+lwdZywoEqD+rpLUb6Rco94V3xOsc74vhtAmbUHNjlS0iuHfX2IXUDJShvbrcW5uhAeg7ad30IRMsAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4gYQFwczofnwMgAAAc1JREFUOMt9k21bElEQhu8VVGQzlFJUUhPD9zJTzIo0Jc1QyETzhSzLqOzN9v9/iTNnlz0La8+HPfPMfe01c3ZnwJXVFom2dzhOR3tnpM0iqFhX3DEUt2MmvdHtNKn7pk/thNOihO3RHidUPZr2Jr1EMn7rdtx3vYr29bs2NTCo/OBAyk3099VtRMdD6cZtrPSQzkXgzrBEI6NwdywzPp7pugejI5IczjIhweQUTM/od2amYWpSwglm5ZyD+35PD2BOoll0H/M8XPCvtPCIed0tUnoRlswr52BRiiN2GR6bOArLEmi8Ak9M/BRWNH6mnnmImrgT8nJdnqtjFXImXoNVdb5gXfwGhZc+3SywIcE6W15vr7Y9uv3a62wLiu73YWdX090d3G9Z75CSROU3kC3l9/bypSy8LUsyrcZsX8LKwaH3xw4PKpLazyr3zi15ZB8re2wfuQk9TrGTRsunxeJpw5y401oNn7X3XrGzMJppDPKHj630/JM/6LlW/NnYkotUM01dmFv05TxIK7XgDn4N4m9NK2p9D/zv5g3m8odPf17SIn/VEr8I0e+wOxnlM5qeWaGYP1eKXhW4RrX6FJRrXKtqMlnlP1r6G/T/AFvrI5LkbSiYAAAAAElFTkSuQmCC"/>
 </svg>

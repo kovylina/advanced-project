@@ -11,18 +11,12 @@
   overflow: hidden;
   width: 150px;
   height: 150px;
-  display: flex;
-  flex-basis: 100%;
   max-width: 150px;
   margin-bottom: 15px;
 }
 
 .user__avatar-img {
-  height: 100%;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
 }
 
 .user__name {

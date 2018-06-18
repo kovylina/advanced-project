@@ -1,0 +1,27 @@
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author__avatar {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.author__pic {
+  width: 100%;
+  max-width: 100%;
+}
+
+.author__name {
+  font-weight: 700;
+  color: $darkgreen;
+}
+
+.author__position {
+  color: $darkgreen;
+}

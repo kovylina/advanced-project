@@ -1,0 +1,131 @@
+.slider {
+  height: 100vh;
+  min-height: 650px;
+  background: $white;
+  display: grid;
+  grid-template: "info preview" 70% "info buttons" 30% / 1fr 1fr;
+  @include tablets {
+    grid-template: "preview" 50% "info" 30% "buttons" 20% / 1fr;
+  }
+}
+
+.slider__info-containder {
+  grid-area: info;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__info-title {
+  margin-bottom: 40px;
+}
+
+.slider__info-skills {
+  border-top: 1px solid $green;
+  border-bottom: 1px solid $green;
+  padding: 15px 0;
+  color: $green;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.slider__preview {
+  grid-area: preview;
+  background: $beige;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__preview-pic {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.slider__buttons {
+  grid-area: buttons;
+  display: flex;
+}
+
+.slider__button {
+  width: 50%;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.5s;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#000000, 0.3);
+    z-index: 10;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 29px;
+    background: svg-load("arrow_down.svg", fill=#ffffff) center center no-repeat / contain;
+    z-index: 20;
+  }
+  &--next {
+    &:after {
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+  }
+}
+
+.slider__button-img-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__button-pic {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.slider__info-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__info-button-link {
+  background: $green;
+  display: flex;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  &:hover {
+    background: $darkgreen;
+  }
+}
+
+.slider__info-button-img {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  margin-right: 10px;
+}

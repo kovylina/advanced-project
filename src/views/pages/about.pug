@@ -18,7 +18,8 @@ block variables
         ['phone', '+7 911 310 6736'], 
         ['map_marker', 'г. Мурманск, ул. Шмидта, д. 1, корп. 3']]          
 
-block scripts
+block scripts 
+  script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB9CjnVFdW29vNUoDrO6cluzKr_9M9axZI')
   script(src='about.bundle.js')
 
 block content 
@@ -36,8 +37,8 @@ block content
           +icon('hamburger', 'hamburger-menu__img')
         
     .hero__title
-      .section-title
-        img(src="", alt="").section-title__pic
+      +icon('portfolio_header', 'hero__title-pic')
+
       .hero__user
         .user
           .user__avatar
@@ -53,13 +54,15 @@ block content
   section.about
     .triangle-page
       .triangle-page__col
-        +icon('triangle_left', 'triangle triangle--fill-light-beige')  
+        +icon('triangle_left', 'triangle triangle--fill-gray-beige')  
       .triangle-page__col
         +icon('triangle_right', 'triangle triangle--fill-beige')
     .about__content
       .about__left
         .about__left-title
           .block-title Обо мне
+            +icon('about_header', 'block-title__subtitle')
+
         .about__left-content
           .user-description
             .user-description__avatar
@@ -76,30 +79,19 @@ block content
         .about__right-description.text-content
           p Больше всего меня привлекает Frontend-разработка, но я также знакома и могу решать несложные задачи на Backend. Но давайте по порядку.
         .about__right-content
-          ul.skills-list
-            each skillrow in skills
-              li.skills-list__item.skills-row
-                .skills-row__title #{skillrow[0]}
-                ul.skills-row__list
-                  each skill in skillrow[1]
-                    li.skills-row__item
-                      figure.skill
-                        svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle--under
-                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle--above
-                        .skill__title #{skill[0]}    
+          #skills-container
 
   section.map
-    .google-map
+    .google-map#google-map
     .map__data
       .contacts
         .contacts__title
           h2.block-subtitle Контакты
-            address.contacts__data      
-              ul.contacts__list
-                each item in contacts
-                  li.contacts__item.contacts-row
-                    .contacts-row.contacts__icon
-                      +icon(`../${item[0]}`, 'contacts__icon-img')
-                        .contacts-row.contacts__title #{item[1]}
+        address.contacts__data      
+          ul.contacts__list
+            each item in contacts
+              li.contacts__item.contacts-row
+                .contacts-row.contacts__icon
+                  +icon(`${item[0]}`, 'contacts__icon-img')
+                .contacts-row.contacts__info #{item[1]}
                            

@@ -1,3 +1,37 @@
 .contacts {
   display: flex;
+  flex-direction: column;
+  background-color: #fcfcfc;
+  opacity: 0.85;
+  border-radius: 5px;
+  padding: 30px 40px;
+}
+
+.contacts__title {
+  margin-bottom: 30px;
+}
+
+.contacts__data {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.contacts__item {
+  margin-bottom: 28px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.contacts__icon-img {
+  width: 100%;
+  height: 100%;
+  fill: $green;
 }

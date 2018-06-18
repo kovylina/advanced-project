@@ -25,15 +25,15 @@ block content
           +icon('hamburger', 'hamburger-menu__img')
         
     .hero__title
-      .section-title
-        img(src="", alt="").section-title__pic
+      +icon('portfolio_header', 'hero__title-pic')
+
       .hero__user
         .user
           .user__avatar
             +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
           .user__description
             .user__page 
-              .block-title Блог
+              .block-title.block-title--hero Блог
             .user__info Статьи, которые я написала
 
     .hero__down_btns

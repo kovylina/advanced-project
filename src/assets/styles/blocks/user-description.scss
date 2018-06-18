@@ -12,19 +12,13 @@
   overflow: hidden;
   width: 440px;
   height: 390px;
-  display: flex;
-  flex-basis: 100%;
   max-width: 440px;
   max-height: 390px;
   margin-bottom: 40px;
 }
 
 .user-description__avatar-img {
-  height: 100%;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
 }
 
 .user-description__title {

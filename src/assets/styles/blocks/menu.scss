@@ -21,14 +21,6 @@
   }
 }
 
-.menu__item {
-  vertical-align: middle;
-  white-space: nowrap;
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
 .menu__item--margin-right {
   margin-right: 40px;
 }
@@ -36,9 +28,9 @@
 .menu__link {
   color: $white;
   text-decoration: none;
-  display: block;
-  vertical-align: middle;
+  display: flex;
   text-align: center;
+  justify-content: center;
   white-space: nowrap;
 }
 
