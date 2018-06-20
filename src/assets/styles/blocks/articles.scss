@@ -1,0 +1,7 @@
+.articles__item {
+  border-bottom: 4px solid $white;
+  margin-bottom: 60px;
+  &:last-child {
+    border-bottom: none;
+  }
+}

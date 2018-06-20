@@ -1,0 +1,42 @@
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__list--welcome-page {
+  background-color: $green;
+  .menu__item {
+    flex-grow: 1;
+  }
+  .menu__link {
+    padding: 15px 0;
+    &:hover {
+      background-color: $darkgreen;
+    }
+  }
+}
+
+.menu__item--margin-right {
+  margin-right: 40px;
+}
+
+.menu__link {
+  color: $white;
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.menu__item--border-right {
+  border-right: 1px solid $light-grey;
+  &:last-child {
+    border-right: none;
+  }
+}

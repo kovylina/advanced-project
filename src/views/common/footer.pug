@@ -1,2 +1,21 @@
 footer.footer
-  h2 Copyright &copy;
+  .footer__row
+    .footer__col
+      nav.menu
+        ul.menu__list
+          each item in [['Мои работы','works.html'], ['Обо мне', 'about.html'], ['Блог','blog.html'],['Авторизация', 'index.html']]
+            li.menu__item.menu__item--margin-right
+              a(href=`${item[1]}`).menu__link #{item[0]}
+    .footer__col.footer__col--justify_end
+      - 
+        var socials = [
+          ['vk', 'https://vk.com/tatyana.kovylina'],
+          ['github', 'https://github.com/kovylina']]     
+      +socials(socials, 'socials--round')
+  .footer__row
+    .footer__col
+      .footer__text
+        p Я веб-разработчик из Мурманска, и этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool.
+    .footer__col.footer__col--justify_end
+      .footer__text
+        p &copy; Татьяна Ковылина | Создано с любовью в Loftschool | 2018   

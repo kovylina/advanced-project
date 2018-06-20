@@ -1,6 +1,6 @@
-langualge: node_js
+language: node_js
 node_js:
-  - "8.11.2"
+  - "10.4.0"
 cache:
   directories:
   - node_modules
@@ -9,9 +9,9 @@ script:
 
 deploy:
   provider: pages
-  skip_cleanup: true
-  github_token: $advanced
-  local_dir: dist
-  target_branch: gh-pages
+  skip-cleanup: true
+  github-token: $advanced
+  local-dir: dist
+  target-branch: gh-pages
   on:
       branch: dev

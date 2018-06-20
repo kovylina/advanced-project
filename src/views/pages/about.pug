@@ -2,9 +2,98 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Обо мне'
+  - 
+    var socials = [
+      ['vk', 'https://vk.com/tatyana.kovylina'],
+      ['github', 'https://github.com/kovylina']]   
+  - 
+    var skills = [
+      ['Frontend', [['HTML5', 30], ['CSS3', 50], ['JavaScript & jQuery',70]]],
+      ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js & npm',70], ['Mongo.db',70]]],
+      ['WorkFlow', [['Git', 30], ['Gulp', 50], ['Bower',70]]]]    
+  - 
+    var contacts = [
+        ['skype', 'kovylina.tatyana'], 
+        ['envelope', 'tkovylina@gmail.com'],
+        ['phone', '+7 911 310 6736'], 
+        ['map_marker', 'г. Мурманск, ул. Шмидта, д. 1, корп. 3']]          
 
-block scripts
+block scripts 
+  script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB9CjnVFdW29vNUoDrO6cluzKr_9M9axZI')
   script(src='about.bundle.js')
 
-block content
-  h1 Страничка "Обо Мне"  
+block content 
+  section.hero
+    .hero__header
+      .hero__links   
+        ul.socials
+          each item in socials
+            li.socials__item
+              a(href=`${item[1]}`).socials__link
+                +icon(item[0], 'socials__link-icon')
+
+      .hero__menu
+        a(href="#").hamburger-menu
+          +icon('hamburger', 'hamburger-menu__img')
+        
+    .hero__title
+      +icon('portfolio_header', 'hero__title-pic')
+
+      .hero__user
+        .user
+          .user__avatar
+            +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
+          .user__description
+            .user__name Татьяна Ковылина
+            .user__info Личный сайт веб разработчика
+
+    .hero__down_btns
+      a(href="#").down-btn
+        +icon('arrow_down', 'down-btn__img')
+
+  .triangles
+    .triangle-page
+      .triangle-page__col
+        +icon('triangle_left', 'triangle triangle--fill-gray-beige')  
+      .triangle-page__col
+        +icon('triangle_right', 'triangle triangle--fill-beige')
+
+  section.about
+    .about__content
+      .about__left
+        .about__left-title
+          .block-title Обо мне
+            +icon('about_header', 'block-title__subtitle')
+
+        .about__left-content
+          .user-description
+            .user-description__avatar
+              +image('user-avatar.jpg', 'Аватар', 'user-description__avatar-img')
+            .user-description__info 
+              .user-description__title
+                .block-subtitle Кто я
+              .user-description__text.text-content
+                p Я веб-разработчик из Мурманска. Мне 33 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
+      .about__right
+        .about__right-title
+          .block-subtitle Чем я могу быть вам полезна
+        .about__right-description.text-content
+          p Больше всего меня привлекает Frontend-разработка, но я также знакома и могу решать несложные задачи на Backend. Но давайте по порядку.
+        .about__right-content
+          #skills-container
+
+  section.map
+    .google-map#google-map
+    .map__data
+      .contacts
+        .contacts__title
+          h2.block-subtitle Контакты
+        address.contacts__data      
+          ul.contacts__list
+            each item in contacts
+              li.contacts__item.contacts-row
+                .contacts-row.contacts__icon
+                  +icon(`${item[0]}`, 'contacts__icon-img')
+                .contacts-row.contacts__info #{item[1]}
+                           

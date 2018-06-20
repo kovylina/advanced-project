@@ -1,6 +1,30 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+  .welcome
+    .welcome__registration
+      .welcome__btn
+        a(href="").auth-button Авторизоваться
+    .welcome__salutation
+      .welcome__content
+        .welcome__user
+          .user.user--color-dark
+              .user__avatar
+                +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
+              .user__description
+                .user__name Татьяна Ковылина
+                .user__info Личный сайт веб разработчика
+          .welcome__socials
+            - 
+              var socials = [
+                ['vk', 'https://vk.com/tatyana.kovylina'],
+                ['github', 'https://github.com/kovylina']] 
+            +socials(socials, 'socials--fill-green')
+        .welcome__menu
+          nav.menu
+            ul.menu__list.menu__list--welcome-page
+              each item in [['Мои работы','works.html'], ['Обо мне', 'about.html'], ['Блог','blog.html']]
+                li.menu__item.menu__item--border-right
+                  a(href=`${item[1]}`).menu__link #{item[0]}
+    .welcome__copyright
+      p &copy; Татьяна Ковылина | Создано с любовью в Loftschool | 2018

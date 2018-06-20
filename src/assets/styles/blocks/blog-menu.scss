@@ -1,0 +1,27 @@
+.blog-menu {
+  display: flex;
+  text-align: right;
+  width: 33%;
+  margin-right: 100px;
+  min-width: 200px;
+  position: sticky;
+  top: 0;
+}
+
+.blog-menu__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-menu__link {
+  text-decoration: none;
+  color: $text-color;
+  display: block;
+  padding: 20px;
+  border-right: 2px solid transparent;
+  transition: 0.5s;
+  &:hover {
+    color: $green;
+    border-right: 2px solid $green;
+  }
+}

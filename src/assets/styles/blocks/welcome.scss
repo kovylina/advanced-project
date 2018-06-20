@@ -1,0 +1,56 @@
+.welcome {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  background: url("assets/images/content/background.jpg");
+  background-size: cover;
+}
+
+.welcome__registration {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.welcome__btn {
+  display: flex;
+}
+
+.welcome__salutation {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  border: none;
+  background-color: $white;
+  opacity: 0.85;
+}
+
+.welcome__user {
+  padding: 30px 65px;
+}
+
+.welcome__menu {
+  display: flex;
+  width: 100%;
+}
+
+.welcome__copyright {
+  color: #fff;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+}
