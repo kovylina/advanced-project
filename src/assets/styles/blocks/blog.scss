@@ -1,5 +1,9 @@
 .blog {
-  position: relative;
+  display: flex;
+}
+
+.blog__menu {
+  display: flex;
 }
 
 .blog__content {
