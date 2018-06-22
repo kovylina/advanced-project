@@ -6,15 +6,16 @@
   position: absolute;
   padding: 25px 15px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   background: url("assets/images/content/background.jpg");
   background-size: cover;
 }
 
 .welcome__registration {
   display: flex;
-  flex-direction: row;
+  width: 100%;
   justify-content: flex-end;
 }
 
@@ -22,30 +23,9 @@
   display: flex;
 }
 
-.welcome__salutation {
+.welcome__flipper {
   display: flex;
   justify-content: center;
-}
-
-.welcome__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  overflow: hidden;
-  border: none;
-  background-color: $white;
-  opacity: 0.85;
-}
-
-.welcome__user {
-  padding: 30px 65px;
-}
-
-.welcome__menu {
-  display: flex;
-  width: 100%;
 }
 
 .welcome__copyright {

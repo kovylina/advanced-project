@@ -35,3 +35,11 @@
   height: 100%;
   fill: $green;
 }
+
+.contacts__link {
+  text-decoration: none;
+  color: $text-color;
+  &:hover {
+    color: $green;
+  }
+}

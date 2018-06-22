@@ -1,0 +1,76 @@
+.form-auth {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-auth__edit {
+  padding: 0 20px;
+}
+
+.form-auth__checks {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-auth__row {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.form-auth__input {
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px 15px 60px;
+  background-color: #fff;
+  background-size: 20px 20px;
+  width: 100%;
+  border: 1px solid transparent;
+}
+
+.form-auth__input:focus {
+  border: 1px solid $green;
+}
+
+.form-auth__input--login {
+  background-color: #fff;
+  background: svg-load("login.svg", fill=$light-grey) 15px 15px no-repeat;
+}
+
+.form-auth__input--password {
+  background-color: #fff;
+  background: svg-load("password.svg", fill=$light-grey) 15px 15px no-repeat;
+}
+
+.form-auth__checks {
+  display: flex;
+}
+
+.form-auth__question {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-auth__btn {
+  display: flex;
+}
+
+.form-auth__button {
+  display: flex;
+  width: 50%;
+  background: $green;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0;
+  &:hover {
+    background: $darkgreen;
+  }
+}
+
+.form-auth__button--border-right {
+  border-right: 1px solid $light-grey;
+}

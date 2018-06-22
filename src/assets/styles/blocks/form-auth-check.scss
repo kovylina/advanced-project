@@ -1,0 +1,79 @@
+.form-auth-check {
+  position: relative;
+  white-space: nowrap;
+  margin-right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.form-auth-check__title {
+  font-size: 16px;
+}
+
+.form-auth-check__input {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.form-auth-check__style {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  position: relative;
+  margin-right: 10px;
+  border: 1px solid $light-grey;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: $green;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.form-auth-check__input:checked {
+  &+.form-auth-check__style {
+    &:after {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  &~.form-auth-check__title {
+    color: $green;
+  }
+}
+
+.form-auth-checkbox {
+  .form-auth-check__style {
+    border-radius: 0px;
+  }
+  .form-auth-check__input {
+    &+.form-radio__style {
+      &:after {
+        background: transparent;
+      }
+    }
+  }
+  .form-auth-check__input:checked {
+    &+.form-auth-check__style {
+      background: $green;
+      &:after {
+        background: svg-load("check.svg", fill=#fff) center center no-repeat / contain;
+        background-size: contain;
+        width: 11px;
+        height: 9px;
+      }
+    }
+    &~.form-auth-check__title {
+      color: $text-color;
+    }
+  }
+}

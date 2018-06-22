@@ -1,0 +1,13 @@
+.flipper-front {
+  z-index: 10;
+  transform: rotateY(0deg);
+}
+
+.flipper-front__user {
+  padding: 30px 65px;
+}
+
+.flipper-front__nav {
+  display: flex;
+  width: 100%;
+}

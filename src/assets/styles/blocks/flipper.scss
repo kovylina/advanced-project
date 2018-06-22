@@ -1,0 +1,32 @@
+.flipper-container {
+  perspective: 1000px;
+}
+
+.flipper {
+  transform-style: preserve-3d;
+  transition: 0.6s;
+  position: relative;
+  width: 100%;
+}
+
+.flipper-container,
+.flipper__card {
+  height: 410px;
+  width: 380px;
+}
+
+.flipper__card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  overflow: hidden;
+  border: none;
+  background-color: $white;
+  opacity: 0.85;
+  width: 100%;
+}
