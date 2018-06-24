@@ -55,6 +55,8 @@ block content
       #slider-component
 
   section.reviews
+    .reviews__bg
+      +image('bg-review.png', '', 'reviews__bg-img')  
     .reviews__title
       .block-title Что обо мне говорят
         +icon('about_header', 'block-title__subtitle')
@@ -84,6 +86,7 @@ block content
                   .author__position Преподаватель  
 
     .contact-form
+      .contact-form__blur
       .form
         .form__title
           .block-subtitle Связаться со мной
