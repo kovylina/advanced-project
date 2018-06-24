@@ -1,15 +1,12 @@
 .welcome {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
+  height: 100vh;
+  position: relative;
+  min-height: 650px;
   padding: 25px 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  background: url("assets/images/content/background.jpg");
+  align-items: center; // background: url("assets/images/content/background.jpg");
   background-size: cover;
 }
 
