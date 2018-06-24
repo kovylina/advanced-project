@@ -22,12 +22,12 @@
 
 .form-auth__input {
   border: none;
-  border-radius: 5px;
+  border-radius: 5px; // ignore
   padding: 15px 20px 15px 60px;
   background-color: #fff;
   background-size: 20px 20px;
   width: 100%;
-  border: 1px solid transparent;
+  border: 1px solid transparent; // ignore
 }
 
 .form-auth__input:focus {
@@ -72,5 +72,5 @@
 }
 
 .form-auth__button--border-right {
-  border-right: 1px solid $light-grey;
+  border-right: 1px solid $light-grey; // ignore
 }

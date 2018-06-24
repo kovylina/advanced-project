@@ -57,50 +57,51 @@ block content
   section.reviews
     .reviews__bg
       +image('bg-review.png', '', 'reviews__bg-img')  
-    .reviews__title
-      .block-title Что обо мне говорят
-        +icon('about_header', 'block-title__subtitle')
-    .reviews__content  
-      ul.reviews__list
-        li.reviews__item
-          .review
-            .review__text
-              p Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-            .review__author
-              .author
-                .author__avatar 
-                  +image('review-1.png', 'Ковальчук Дмитрий', 'author__pic')
-                .author__info  
-                  .author__name Ковальчук Дмитрий
-                  .author__position Основатель Loftschool
-        li.reviews__item
-          .review
-            .review__text
-              p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-            .review__author
-              .author
-                .author__avatar 
-                  +image('review-2.jpg', 'Сабанцев Владимир', 'author__pic')
-                .author__info  
-                  .author__name Сабанцев Владимир
-                  .author__position Преподаватель  
+    .reviews__container
+      .reviews__title
+        .block-title Что обо мне говорят
+          +icon('about_header', 'block-title__subtitle')
+      .reviews__content  
+        ul.reviews__list
+          li.reviews__item
+            .review
+              .review__text
+                p Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              .review__author
+                .author
+                  .author__avatar 
+                    +image('review-1.png', 'Ковальчук Дмитрий', 'author__pic')
+                  .author__info  
+                    .author__name Ковальчук Дмитрий
+                    .author__position Основатель Loftschool
+          li.reviews__item
+            .review
+              .review__text
+                p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+              .review__author
+                .author
+                  .author__avatar 
+                    +image('review-2.jpg', 'Сабанцев Владимир', 'author__pic')
+                  .author__info  
+                    .author__name Сабанцев Владимир
+                    .author__position Преподаватель  
 
-    .contact-form
-      .contact-form__blur
-      .form
-        .form__title
-          .block-subtitle Связаться со мной
-        form.form__form(action="")
-          .form__edit
-            each item in [['text', 'Имя','form-name'], ['email', 'Email', 'form-email']]
+      .contact-form
+        .contact-form__blur
+        .form
+          .form__title
+            .block-subtitle Связаться со мной
+          form.form__form(action="")
+            .form__edit
+              each item in [['text', 'Имя','form-name'], ['email', 'Email', 'form-email']]
+                .form__row
+                  input.form__input(type=`${item[0]}`, placeholder=`${item[1]}`, id=`${item[2]}`, name=`${item[2]}`)
               .form__row
-                input.form__input(type=`${item[0]}`, placeholder=`${item[1]}`, id=`${item[2]}`, name=`${item[2]}`)
-            .form__row
-              textarea.form__textarea(name="form-comment", id="form-comment") Ваше сообщение
-          .form__btn
-            button.form__button.form__button--border-right(type="submit") Отправить
-            button.form__button(type="reset") Очистить
-    
-    .reviews__up-btns
-      a(href="#").up-btn
-        +icon('arrow_down', 'up-btn__img')
+                textarea.form__textarea(name="form-comment", id="form-comment") Ваше сообщение
+            .form__btn
+              button.form__button.form__button--border-right(type="submit") Отправить
+              button.form__button(type="reset") Очистить
+      
+      .reviews__up-btns
+        a(href="#").up-btn
+          +icon('arrow_down', 'up-btn__img')

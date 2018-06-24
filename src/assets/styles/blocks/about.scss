@@ -1,17 +1,25 @@
 .about {
   position: relative;
+  display: flex;
 }
 
 .about__content {
   display: flex;
   text-align: center;
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .about__left,
 .about__right {
+  display: flex;
+  flex-direction: column;
   width: 50%;
-  min-width: 300px;
   padding-bottom: 40px;
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .about__left {
@@ -25,6 +33,9 @@
 .about__left-title {
   margin-bottom: 55px;
   text-align: center;
+  @include tablets {
+    margin-bottom: 0;
+  }
 }
 
 .about__right {
@@ -33,8 +44,15 @@
 
 .about__right-title {
   margin-bottom: 40px;
+  @include tablets {
+    margin-bottom: 0;
+  }
 }
 
 .about__right-content {
   text-align: left;
+  @include tablets {
+    text-align: center;
+    align-items: center;
+  }
 }

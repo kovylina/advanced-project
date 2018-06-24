@@ -9,6 +9,9 @@
 
 .triangle--fill-beige {
   fill: $beige;
+  @include tablets {
+    fill: $white;
+  }
 }
 
 .triangle--fill-white {

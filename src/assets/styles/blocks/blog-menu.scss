@@ -18,10 +18,10 @@
   color: $text-color;
   display: block;
   padding: 20px;
-  border-right: 2px solid transparent;
+  border-right: 2px solid transparent; // ignore
   transition: 0.5s;
   &:hover {
     color: $green;
-    border-right: 2px solid $green;
+    border-right: 2px solid $green; // ignore
   }
 }

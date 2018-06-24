@@ -6,8 +6,7 @@
   line-height: 1.42;
   text-align: center;
   padding: 45px 70px;
-  z-index:20;
-
+  z-index: 20;
   &:before,
   &:after {
     content: "";
@@ -16,7 +15,7 @@
     top: 50%;
     transform: translateY(-50%);
     width: 22px;
-    height: 5px;
+    height: 5px; // ignore
     background: rgba($grey, .2);
   }
   $margin: 35px;
@@ -25,14 +24,17 @@
   }
   &:after {
     right: $margin;
-  }  
+  }
+  @include phones {
+    font-size: 48px;
+  }
 }
 
 .block-title--hero {
-  padding: 0 70px; 
+  padding: 0 70px;
   &:before,
   &:after {
-    background: rgba(255, 255, 255, .2);  
+    background: rgba(255, 255, 255, .2);
   }
 }
 

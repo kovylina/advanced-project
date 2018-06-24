@@ -5,11 +5,17 @@ html {
 
 body {
   font-family: "Roboto", Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 16px; // converted to 1rem
   line-height: 1.42;
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include tablets {
+    font-size: 14px; // converted to 1rem
+  }
+  @include phones {
+    font-size: 13px; // converted to 1rem
+  }
 }
 
 .wrapper {

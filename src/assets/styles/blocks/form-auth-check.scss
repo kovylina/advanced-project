@@ -24,7 +24,7 @@
   background: #ffffff;
   position: relative;
   margin-right: 10px;
-  border: 1px solid $light-grey;
+  border: 1px solid $light-grey; // ignore
   &:after {
     content: "";
     display: block;

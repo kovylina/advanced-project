@@ -2,11 +2,14 @@
   padding-top: 70px;
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 5px; // ignore
   overflow: hidden;
   width: 100%;
   position: relative;
   z-index: 1;
+  @include tablets {
+    padding-top: 40px;
+  }
 }
 
 .form__form {
@@ -17,6 +20,10 @@
 
 .form__title {
   margin-bottom: 40px;
+  text-align: center;
+  @include tablets {
+    margin-bottom: 0;
+  }
 }
 
 .form__edit {
@@ -29,14 +36,14 @@
 
 .form__input {
   border: none;
-  border-radius: 5px;
+  border-radius: 5px; // ignore
   padding: 10px 20px;
   width: 100%;
 }
 
 .form__textarea {
   border: none;
-  border-radius: 5px;
+  border-radius: 5px; // ignore
   padding: 10px 20px;
   width: 100%;
   resize: none;
@@ -61,5 +68,5 @@
 }
 
 .form__button--border-right {
-  border-right: 1px solid $light-grey;
+  border-right: 1px solid $light-grey; // ignore
 }

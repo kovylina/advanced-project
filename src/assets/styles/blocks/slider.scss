@@ -14,20 +14,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include phones {
+    margin-bottom: 30px;
+  }
 }
 
 .slider__info-title {
   margin-bottom: 40px;
+  @include tablets {
+    margin-bottom: 0;
+  }
 }
 
 .slider__info-skills {
-  border-top: 1px solid $green;
-  border-bottom: 1px solid $green;
+  border-top: 1px solid $green; // ignore
+  border-bottom: 1px solid $green; // ignore
   padding: 15px 0;
   color: $green;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 40px;
+  @include tablets {
+    margin-bottom: 20px;
+  }
 }
 
 .slider__preview {
@@ -112,7 +121,7 @@
 .slider__info-button-link {
   background: $green;
   display: flex;
-  border-radius: 5px;
+  border-radius: 5px; // ignore
   padding: 10px 20px;
   text-decoration: none;
   color: #fff;

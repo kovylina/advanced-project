@@ -5,19 +5,26 @@
   padding: 25px 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center; // background: url("assets/images/content/background.jpg");
   background-size: cover;
 }
 
 .welcome__registration {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  @include phones {
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .welcome__btn {
   display: flex;
+  width: 100%;
 }
 
 .welcome__flipper {
@@ -26,8 +33,13 @@
 }
 
 .welcome__copyright {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
   color: #fff;
   font-weight: 300;
-  display: flex;
-  justify-content: center;
+  z-index: 10;
+  width: 80%;
+  text-align: center;
 }
