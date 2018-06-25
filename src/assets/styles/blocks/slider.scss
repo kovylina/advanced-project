@@ -3,9 +3,10 @@
   min-height: 650px;
   background: $white;
   display: grid;
+  overflow: hidden;
   grid-template: "info preview" 70% "info buttons" 30% / 1fr 1fr;
   @include tablets {
-    grid-template: "preview" 50% "info" 30% "buttons" 20% / 1fr;
+    grid-template: "preview" 45% "info" 35% "buttons" 20% / 1fr;
   }
 }
 
