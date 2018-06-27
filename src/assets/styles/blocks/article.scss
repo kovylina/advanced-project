@@ -3,6 +3,13 @@
   font-size: 35px;
   line-height: 1.42;
   margin-bottom: 30px;
+  @include tablets {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  @include phones {
+    font-size: 21px;
+  }
 }
 
 .article__date {
@@ -11,8 +18,22 @@
 
 .article__header {
   margin-bottom: 30px;
+  @include tablets {
+    margin-bottom: 10px;
+  }
 }
 
 .article__content {
   margin-bottom: 70px;
+  @include tablets {
+    margin-bottom: 50px;
+  }
+}
+
+.article__code {
+  width: 100%;
+}
+
+.article__code-example {
+  width: 100%;
 }

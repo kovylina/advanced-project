@@ -13,10 +13,10 @@ block variables
       ['WorkFlow', [['Git', 30], ['Gulp', 50], ['Bower',70]]]]    
   - 
     var contacts = [
-        ['skype', 'kovylina.tatyana'], 
-        ['envelope', 'tkovylina@gmail.com'],
-        ['phone', '+7 911 310 6736'], 
-        ['map_marker', 'г. Мурманск, ул. Шмидта, д. 1, корп. 3']]          
+        ['skype', 'kovylina.tatyana', 'callto:kovylina.tatyana'], 
+        ['envelope', 'tkovylina@gmail.com', 'mailto:tkovylina@gmail.com'],
+        ['phone', '+7 911 310 6736', 'tel:+79113106736'], 
+        ['map_marker', 'г. Мурманск, ул. Шмидта, д. 1, корп. 3', '#']]          
 
 block scripts 
   script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB9CjnVFdW29vNUoDrO6cluzKr_9M9axZI')
@@ -95,5 +95,5 @@ block content
               li.contacts__item.contacts-row
                 .contacts-row.contacts__icon
                   +icon(`${item[0]}`, 'contacts__icon-img')
-                .contacts-row.contacts__info #{item[1]}
-                           
+                .contacts-row.contacts__info 
+                  a(href=`${item[2]}`).contacts__link #{item[1]}

@@ -1,14 +1,31 @@
 .block-subtitle {
+  position: relative;
+  display: inline-block;
   font-family: "bernier", Helvetica, sans-serif;
   font-size: 35px;
   line-height: 1.42;
   text-align: center;
+  padding: 25px 60px;
   &:before,
   &:after {
-    content: "-";
-    display: inline-block;
-    vertical-align: middle;
-    color: $light-grey;
-    margin: 0 20px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 5px; // ignore
+    background: rgba($grey, 0.2);
+  }
+  $margin: 15px;
+  &:before {
+    left: $margin;
+  }
+  &:after {
+    right: $margin;
+  }
+  @include phones {
+    font-size: 21px;
+    padding: 15px 60px;
   }
 }

@@ -1,5 +1,4 @@
 .user-description {
-  max-width: 440px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -15,12 +14,19 @@
   max-width: 440px;
   max-height: 390px;
   margin-bottom: 40px;
+  @include phones {
+    width: 320px;
+    height: 285px;
+    max-width: 320px;
+    max-height: 285px;
+    margin-bottom: 0;
+  }
 }
 
 .user-description__avatar-img {
   width: 100%;
 }
 
-.user-description__title {
-  margin-bottom: 40px;
+.user-description__info {
+  width: 95%;
 }

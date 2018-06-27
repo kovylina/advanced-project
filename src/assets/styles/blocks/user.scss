@@ -13,6 +13,11 @@
   height: 150px;
   max-width: 150px;
   margin-bottom: 15px;
+  @include phones {
+    width: 140px;
+    height: 140px;
+    max-width: 140px;
+  }
 }
 
 .user__avatar-img {
@@ -22,6 +27,10 @@
 .user__name {
   font-size: 28px;
   font-weight: 500;
+  white-space: nowrap;
+  @include phones {
+    font-size: 21px;
+  }
 }
 
 .user--color-dark {

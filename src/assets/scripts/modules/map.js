@@ -201,11 +201,14 @@ function initMap() {
     position: point,
     map: map,
     draggable: false,
-    animation: google.maps.Animation.DROP,
     icon: {
-      url: "assets/images/icons/sprite.svg#map_marker",
+      url: "assets/images/svg/map_marker.svg",
+      size: new google.maps.Size(30, 40),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(15, 40),
       scaledSize: new google.maps.Size(30, 40),
-      fillColor: "#FF0000"
+      fillColor: "#16c2aa",
+      fillOpacity: 1
     }
   });
   marker.setMap(map);

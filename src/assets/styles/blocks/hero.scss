@@ -24,6 +24,9 @@
 .hero__title {
   margin-bottom: 120px;
   position: relative;
+  @include tablets {
+    margin-bottom: 50px;
+  }
 }
 
 .hero__title-pic {

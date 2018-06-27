@@ -1,17 +1,22 @@
 .review {
   padding-top: 60px;
 }
+
 .review__text {
   margin-bottom: 20px;
   position: relative;
-
   &:before {
     content: "";
-    background: svg-load("quote-left.svg", fill=#d5d7d8) center center no-repeat / contain;
+    background: svg-load("quote-left.svg", fill=#d5d7d8) center center no-repeat /
+      contain;
     position: absolute;
     top: -60px;
-    left:0;
+    left: 0;
     width: 33px;
     height: 33px;
+    @include phones {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

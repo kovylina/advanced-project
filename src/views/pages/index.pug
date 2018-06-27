@@ -1,30 +1,79 @@
 extends ../auth.layout.pug
 
+block scripts
+  script(src='welcome.bundle.js')
+
 block content
   .welcome
+    .parallax  
+      .parallax__layer.parallax__layer-2
+        +image('parallax/layer-2.png', '', 'parallax__layer-img')
+      .parallax__layer.parallax__layer-3
+        +image('parallax/layer-3.png', '', 'parallax__layer-img')
+      .parallax__layer.parallax__layer-4
+        +image('parallax/layer-4.png', '', 'parallax__layer-img')                  
+      .parallax__layer.parallax__layer-5
+        +image('parallax/layer-5.png', '', 'parallax__layer-img')
+      .parallax__layer.parallax__layer-6
+        +image('parallax/layer-6.png', '', 'parallax__layer-img')
+      .parallax__layer.parallax__layer-7
+        +image('parallax/layer-7.png', '', 'parallax__layer-img')                  
+
     .welcome__registration
       .welcome__btn
         a(href="").auth-button Авторизоваться
-    .welcome__salutation
-      .welcome__content
-        .welcome__user
-          .user.user--color-dark
-              .user__avatar
-                +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
-              .user__description
-                .user__name Татьяна Ковылина
-                .user__info Личный сайт веб разработчика
-          .welcome__socials
-            - 
-              var socials = [
-                ['vk', 'https://vk.com/tatyana.kovylina'],
-                ['github', 'https://github.com/kovylina']] 
-            +socials(socials, 'socials--fill-green')
-        .welcome__menu
-          nav.menu
-            ul.menu__list.menu__list--welcome-page
-              each item in [['Мои работы','works.html'], ['Обо мне', 'about.html'], ['Блог','blog.html']]
-                li.menu__item.menu__item--border-right
-                  a(href=`${item[1]}`).menu__link #{item[0]}
+    
+    .welcome__flipper.flipper-container
+      .flipper
+        .flipper-front.flipper__card
+          .flipper-front__user
+            .user.user--color-dark
+                .user__avatar
+                  +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
+                .user__description
+                  .user__name Татьяна Ковылина
+                  .user__info Личный сайт веб разработчика
+            .flipper-front__socials
+              - 
+                var socials = [
+                  ['vk', 'https://vk.com/tatyana.kovylina'],
+                  ['github', 'https://github.com/kovylina']] 
+              +socials(socials, 'socials--fill-green')
+          .flipper-front__nav
+            nav.menu
+              ul.menu__list.menu__list--welcome-page
+                each item in [['Мои работы','works.html'], ['Обо мне', 'about.html'], ['Блог','blog.html']]
+                  li.menu__item.menu__item--border-right
+                    a(href=`${item[1]}`).menu__link #{item[0]}
+
+        .flipper-back.flipper__card
+          .authtorization
+            .authtorization__title
+              .block-subtitle Авторизуйтесь
+            form.form-auth(action="") 
+              .form-auth__edit
+                each item in [['text', 'Логин','form-login','form-auth__input--login'], ['password', 'Пароль', 'form-password', 'form-auth__input--password']]
+                  .form-auth__row
+                    input.form-auth__input(type=`${item[0]}`, placeholder=`${item[1]}`, id=`${item[2]}`, name=`${item[2]}`, class=`${item[3]}`)
+              .form-auth__checks
+                .form-auth__row
+                  label.form-auth-check.form-auth-checkbox
+                    input.form-auth-check__input(type="checkbox", name="capcha")
+                    span.form-auth-check__style
+                    span.form-auth-check__title#human(name="human", value="1") Я человек
+                h5.form-auth__question Вы точно не робот?
+                .form-auth__row  
+                  label.form-auth-check
+                    input.form-auth-check__input(type="radio", name="sure")
+                    span.form-auth-check__style
+                    span.form-auth-check__title#sure-yes(name="sure-yes", value="1") Да
+                  label.form-auth-check
+                    input.form-auth-check__input(type="radio", name="sure")
+                    span.form-auth-check__style
+                    span.form-auth-check__title#sure-no(name="sure-no", value="1") Не уверен                    
+              .form-auth__btn
+                button.form-auth__button.form-auth__button--border-right(type="button") На главную
+                button.form-auth__button(type="submit") Войти        
+                  
     .welcome__copyright
       p &copy; Татьяна Ковылина | Создано с любовью в Loftschool | 2018

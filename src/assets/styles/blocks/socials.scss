@@ -9,6 +9,9 @@
   &:last-child {
     margin-right: 0;
   }
+  @include phones {
+    margin-right: 10px;
+  }
 }
 
 .socials__icon {
@@ -51,7 +54,7 @@
     height: 35px;
     width: 35px;
     border-radius: 50%;
-    border: 1px solid $light-grey;
+    border: 1px solid $light-grey; // ignore
     line-height: 35px;
     &:hover {
       background: #fff;

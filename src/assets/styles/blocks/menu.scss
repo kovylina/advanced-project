@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  display: flex;
+  @include tablets {
+    justify-content: center;
+  }
 }
 
 .menu__list {
@@ -10,6 +14,7 @@
 
 .menu__list--welcome-page {
   background-color: $green;
+  width: 100%;
   .menu__item {
     flex-grow: 1;
   }
@@ -17,12 +22,19 @@
     padding: 15px 0;
     &:hover {
       background-color: $darkgreen;
+      color: #fff;
     }
   }
 }
 
 .menu__item--margin-right {
   margin-right: 40px;
+  @include phones {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .menu__link {
@@ -32,10 +44,13 @@
   text-align: center;
   justify-content: center;
   white-space: nowrap;
+  &:hover {
+    color: $green;
+  }
 }
 
 .menu__item--border-right {
-  border-right: 1px solid $light-grey;
+  border-right: 1px solid $light-grey; // ignore
   &:last-child {
     border-right: none;
   }
