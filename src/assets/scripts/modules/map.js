@@ -202,7 +202,7 @@ function initMap() {
     map: map,
     draggable: false,
     icon: {
-      url: "assets/images/icons/sprite.svg#map_marker",
+      url: "assets/images/svg/map_marker.svg",
       size: new google.maps.Size(30, 40),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(15, 40),

@@ -11,10 +11,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-bottom: 150px;
-  @include tablets {
-    margin-bottom: 200px;
-  }
 }
 
 .reviews__bg {

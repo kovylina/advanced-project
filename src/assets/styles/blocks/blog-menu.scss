@@ -1,16 +1,13 @@
 .blog-menu {
-  display: flex;
-  text-align: right;
-  width: 33%;
-  margin-right: 100px;
-  min-width: 200px;
   position: sticky;
-  top: 0;
+  top: 0px;
 }
 
 .blog-menu__list {
   display: flex;
+  text-align: right;
   flex-direction: column;
+  width: 100%;
 }
 
 .blog-menu__link {
@@ -23,5 +20,30 @@
   &:hover {
     color: $green;
     border-right: 2px solid $green; // ignore
+  }
+  @include phones {
+    color: #fff;
+    border: none;
+    opacity: 0.7;
+    &:hover {
+      color: #fff;
+      border: none;
+      opacity: 1;
+    }
+  }
+}
+
+.blog-menu__swipe-link {
+  display: none;
+  border-radius: 50%;
+  background-color: $green;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateX(-50%);
+  @include phones {
+    display: block;
   }
 }
