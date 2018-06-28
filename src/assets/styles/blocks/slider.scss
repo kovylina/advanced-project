@@ -57,6 +57,7 @@
 .slider__buttons {
   grid-area: buttons;
   display: flex;
+  overflow: hidden;
 }
 
 .slider__button {
@@ -98,8 +99,7 @@
 
 .slider__button-img-wrap {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
   height: 100%;
   width: 100%;
   display: flex;
@@ -138,4 +138,51 @@
   height: 22px;
   fill: #fff;
   margin-right: 10px;
+}
+
+.slider__button-img-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.slide-down-enter-active,
+.slide-down-enter-leave,
+.slide-up-enter-active,
+.slide-up-enter-leave {
+  transition: 1s;
+}
+
+.slide-down-leave {
+  bottom: 0;
+}
+
+.slide-down-leave-to {
+  bottom: -100%;
+}
+
+.slide-down-enter {
+  bottom: 100%;
+}
+
+.slide-down-enter-to {
+  bottom: 0;
+}
+
+.slide-up-leave {
+  bottom: 0;
+}
+
+.slide-up-leave-to {
+  bottom: 100%;
+}
+
+.slide-up-enter {
+  bottom: -100%;
+}
+
+.slide-up-enter-to {
+  bottom: 0;
 }

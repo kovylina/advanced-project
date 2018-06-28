@@ -24,6 +24,8 @@
   stroke: $green;
   stroke-dasharray: 251;
   stroke-dashoffset: 251;
+  transition-property: stroke-dashoffset;
+  transition-duration: 3s;
 }
 
 .skill__title {
