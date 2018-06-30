@@ -3,6 +3,10 @@
   transform: rotateY(0deg);
 }
 
+.flipper-front--show {
+  transform: rotateY(180deg);
+}
+
 .flipper-front__user {
   padding: 30px 65px;
 }
