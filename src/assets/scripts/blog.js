@@ -1,6 +1,9 @@
 import setMargin from "./modules/margin";
+import "./modules/blog-scroll";
 
-setMargin(".blog");
+window.onload = function() {
+  setMargin(".blog");
+};
 
 window.onresize = function() {
   setMargin(".blog");

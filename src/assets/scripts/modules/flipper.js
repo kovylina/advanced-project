@@ -1,70 +1,59 @@
+// Кнопка авторизации
+const authButton = document.querySelector(".welcome__btn");
+// Кнопка "На главную"
+const backButton = document.querySelector(".form-auth__button-back");
+// Передняя карточка с информацией о пользователе
+const frontCard = document.querySelector(".flipper-front");
+// Обратная сторона с формой авторизации
+const backCard = document.querySelector(".flipper-back");
+// Главная страница
+const welcomeContainer = document.querySelector(".welcome");
+
 // Переворачивающееся меню на главной странице по кнопке "Авторизация"
-(function() {
-  // Получим кнопку авторизации
-  const authButton = document.querySelector(".auth-button");
+const onClickAuthButton = function(e) {
+  // Предотвратим переход по ссылке
+  e.preventDefault();
+  // Поменяем местами карточки
+  frontCard.classList.add("flipper-front--show");
+  backCard.classList.add("flipper-back--show");
 
-  // При клике на кнопку "перевернем" карточки
-  authButton.addEventListener("click", function(e) {
-    e.preventDefault();
+  // скроем кнопку авторизации
+  authButton.classList.add("welcome__btn--skip");
+};
 
-    const frontCard = document.querySelector(".flipper-front");
-    const backCard = document.querySelector(".flipper-back");
+const onClickBackButton = function(e) {
+  // Предотвратим переход по ссылке
+  e.preventDefault();
+  // Поменяем местами карточки
+  frontCard.classList.remove("flipper-front--show");
+  backCard.classList.remove("flipper-back--show");
 
-    frontCard.classList.add("flipper-front--show");
-    backCard.classList.add("flipper-back--show");
-
-    // скроем кнопку авторизации
-    authButton.parentNode.classList.add("welcome__btn--skip");
-  });
-})();
-
-// Перевернем меню по кнопке "На главную"
-(function() {
-  // Получим кнопку
-  const backButton = document.querySelector(".form-auth__button-back");
-
-  // При клике на кнопку "перевернем" карточки
-  backButton.addEventListener("click", function(e) {
-    e.preventDefault();
-
-    const frontCard = document.querySelector(".flipper-front");
-    const backCard = document.querySelector(".flipper-back");
-    const authButton = document.querySelector(".welcome__btn");
-
-    frontCard.classList.remove("flipper-front--show");
-    backCard.classList.remove("flipper-back--show");
-
-    // покаже кнопку авторизации
-    authButton.classList.remove("welcome__btn--skip");
-  });
-})();
+  // покажем кнопку авторизации
+  authButton.classList.remove("welcome__btn--skip");
+};
 
 // Перевернем меню при клике на свободное поле
-(function() {
-  // Получим область
-  const welcomeContainer = document.querySelector(".welcome");
+const onClickField = function(e) {
+  // Проверим, что кликнули по свободному пространству
+  let target = e.target;
 
-  // При клике на кнопку "перевернем" карточки
-  welcomeContainer.addEventListener("click", function(e) {
-    e.preventDefault();
+  if (!target.classList.contains("parallax__layer-img")) return;
 
-    // Проверим, что кликнули по свободному пространству
-    let target = e.target;
+  if (frontCard.classList.contains("flipper-front--show"))
+    frontCard.classList.remove("flipper-front--show");
 
-    if (!target.classList.contains("parallax__layer-img")) return;
+  if (backCard.classList.contains("flipper-back--show"))
+    backCard.classList.remove("flipper-back--show");
 
-    const frontCard = document.querySelector(".flipper-front");
-    const backCard = document.querySelector(".flipper-back");
-    const authButton = document.querySelector(".welcome__btn");
+  // покаже кнопку авторизации
+  if (authButton.classList.contains("welcome__btn--skip"))
+    authButton.classList.remove("welcome__btn--skip");
+};
 
-    if (frontCard.classList.contains("flipper-front--show"))
-      frontCard.classList.remove("flipper-front--show");
+const onInit = function(e) {
+  authButton.addEventListener("click", onClickAuthButton);
+  backButton.addEventListener("click", onClickBackButton);
+  welcomeContainer.addEventListener("click", onClickField);
+};
 
-    if (backCard.classList.contains("flipper-back--show"))
-      backCard.classList.remove("flipper-back--show");
-
-    // покаже кнопку авторизации
-    if (authButton.classList.contains("welcome__btn--skip"))
-      authButton.classList.remove("welcome__btn--skip");
-  });
-})();
+window.addEventListener("load", onInit);
