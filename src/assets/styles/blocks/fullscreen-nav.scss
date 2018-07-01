@@ -1,25 +1,21 @@
 .fullscreen-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: $green;
   display: none;
-  justify-content: center;
-  z-index: 100;
-  color: #fff;
-  opacity: 0.87;
 }
 
 .fullscreen-nav--active {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $green;
+  z-index: 120;
 }
 
 .fullscreen-nav__nav {
-  position: fixed;
   opacity: 1;
-  z-index: 120px;
   .menu__list {
     flex-direction: column;
     align-items: center;
@@ -59,6 +55,10 @@
       &:after {
         opacity: 1;
       }
+    }
+    @include phones {
+      padding: 20px 70px;
+      font-size: 30px;
     }
   }
 }

@@ -1,3 +1,4 @@
+import "./modules/preloader";
 import "./modules/slider";
 import "./modules/blur";
 import "./modules/fullscreenmenu";

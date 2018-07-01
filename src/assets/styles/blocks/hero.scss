@@ -5,6 +5,7 @@
   padding: 30px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .hero__header {
@@ -12,7 +13,6 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 80px;
 }
 
 .hero__menu {
@@ -32,11 +32,7 @@
 }
 
 .hero__title {
-  margin-bottom: 120px;
   position: relative;
-  @include tablets {
-    margin-bottom: 50px;
-  }
 }
 
 .hero__title-pic {

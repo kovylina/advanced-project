@@ -1,0 +1,76 @@
+.preloader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+  background-color: $green;
+  background: url("assets/images/content/preloader-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 200;
+}
+
+.preloader--done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader__container {
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+}
+
+.preloader__progress {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.preloader__progress-fugure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.preloader__progress-fugure--rotate-140deg {
+  transform: rotate(-140deg);
+}
+
+.preloader__progress-fugure--rotate-120deg {
+  transform: rotate(-120deg);
+}
+
+.preloader__progress-fugure--rotate-90deg {
+  transform: rotate(-90deg);
+}
+
+.preloader__circle {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 251;
+  transition-property: stroke-dashoffset;
+  transition-duration: 0.7s;
+}
+
+.preloader__progress-percent {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-size: 12.82px;
+  font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
