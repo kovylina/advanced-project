@@ -21,8 +21,9 @@ block content
                 +icon(item[0], 'socials__link-icon')
 
       .hero__menu
-        a(href="#").hamburger-menu
-          +icon('hamburger', 'hamburger-menu__img')
+        button(type="buttons", aria-controls="fullscreen-nav" class="hamburger-menu--squeeze").hamburger-menu
+          span.hamburger-menu__box
+            span.hamburger-menu__inner 
         
     .hero__title
       +icon('portfolio_header', 'hero__title-pic')
@@ -51,7 +52,7 @@ block content
     aside.blog__menu
       .blog-menu  
         ul.blog-menu__list 
-          each item in ['Самое важное в SASS', 'Приёмы в вёрстке, без которых не обходится ни один сайт', 'Самый необходимый набор Gulp плагинов', 'Почему я выбрал Jade']
+          each item in ['Самое важное в SASS', 'Приёмы в вёрстке, без которых не обходится ни один сайт', 'Самый необходимый набор Gulp плагинов', 'Почему я выбрала Jade']
             li.blog-menu__item
               a(href="#").blog-menu__link #{item}
       a(href="#").blog-menu__swipe-link  

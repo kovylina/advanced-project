@@ -12,6 +12,10 @@
   opacity: 0.87;
 }
 
+.fullscreen-nav--active {
+  display: flex;
+}
+
 .fullscreen-nav__nav {
   position: fixed;
   opacity: 1;
@@ -29,6 +33,7 @@
     text-align: center;
     padding: 40px 70px;
     white-space: nowrap;
+    color: #fff;
     &:before,
     &:after {
       content: "";
@@ -49,6 +54,7 @@
       right: 35px;
     }
     &:hover {
+      color: #fff;
       &:before,
       &:after {
         opacity: 1;

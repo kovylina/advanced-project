@@ -15,6 +15,16 @@
   margin-bottom: 80px;
 }
 
+.hero__menu {
+  z-index: 150;
+}
+
+.hero__menu--fullscreen-menu {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+}
+
 .hero__down_btns {
   display: flex;
   justify-content: center;

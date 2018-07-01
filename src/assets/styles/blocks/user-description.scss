@@ -28,5 +28,8 @@
 }
 
 .user-description__info {
-  width: 95%;
+  width: 440px;
+  @include phones {
+    width: 320px;
+  }
 }

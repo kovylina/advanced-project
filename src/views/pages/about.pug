@@ -33,8 +33,9 @@ block content
                 +icon(item[0], 'socials__link-icon')
 
       .hero__menu
-        a(href="#").hamburger-menu
-          +icon('hamburger', 'hamburger-menu__img')
+        button(type="buttons", aria-controls="fullscreen-nav" class="hamburger-menu--squeeze").hamburger-menu
+          span.hamburger-menu__box
+            span.hamburger-menu__inner  
         
     .hero__title
       +icon('portfolio_header', 'hero__title-pic')
