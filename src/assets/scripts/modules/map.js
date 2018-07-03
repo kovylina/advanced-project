@@ -1,7 +1,7 @@
 function initMap() {
   var center = {
-    lat: 68.95647,
-    lng: 33.058251
+    lat: 68.958695,
+    lng: 33.051155
   };
 
   var point = {

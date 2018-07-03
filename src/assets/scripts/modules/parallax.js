@@ -22,4 +22,8 @@ const moveLayers = e => {
   });
 };
 
-window.addEventListener("mousemove", moveLayers);
+window.addEventListener("load", init);
+
+function init(e) {
+  window.addEventListener("mousemove", moveLayers);
+}

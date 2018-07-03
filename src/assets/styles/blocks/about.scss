@@ -1,11 +1,13 @@
 .about {
   position: relative;
   display: flex;
+  width: 100%;
 }
 
 .about__content {
   display: flex;
   text-align: center;
+  width: 100%;
   @include tablets {
     flex-direction: column;
   }

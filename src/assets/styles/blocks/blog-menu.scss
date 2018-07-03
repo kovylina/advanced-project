@@ -1,6 +1,14 @@
 .blog-menu {
-  position: sticky;
-  top: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.blog-menu--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 33%;
 }
 
 .blog-menu__list {
@@ -30,6 +38,16 @@
       border: none;
       opacity: 1;
     }
+  }
+}
+
+.blog-menu__link--active {
+  color: $green;
+  border-right: 2px solid $green; // ignore
+  @include phones {
+    color: #fff;
+    border: none;
+    opacity: 1;
   }
 }
 
