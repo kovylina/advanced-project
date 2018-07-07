@@ -24,6 +24,9 @@ block scripts
 
 block content 
   section.hero.section
+    .hero__background
+      +image('bg-about.jpg', 'Горы', 'hero__background-img')
+
     .hero__header
       .hero__links   
         ul.socials
@@ -36,17 +39,17 @@ block content
         button(type="buttons", aria-controls="fullscreen-nav" class="hamburger-menu--squeeze").hamburger-menu
           span.hamburger-menu__box
             span.hamburger-menu__inner  
-        
+         
     .hero__title
       +icon('portfolio_header', 'hero__title-pic')
 
-      .hero__user
-        .user
-          .user__avatar
-            +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
-          .user__description
-            .user__name Татьяна Ковылина
-            .user__info Личный сайт веб разработчика
+    .hero__user
+      .user
+        .user__avatar
+          +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
+        .user__description
+          .user__name Татьяна Ковылина
+          .user__info Личный сайт веб разработчика
 
     .hero__down_btns
       a(href="#").down-btn

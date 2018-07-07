@@ -12,6 +12,9 @@ block scripts
 
 block content 
   section.hero.section
+    .hero__background
+      +image('bg-about.jpg', 'Горы', 'hero__background-img')
+
     .hero__header
       .hero__links   
         ul.socials
@@ -28,14 +31,14 @@ block content
     .hero__title
       +icon('portfolio_header', 'hero__title-pic')
 
-      .hero__user
-        .user
-          .user__avatar
-            +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
-          .user__description
-            .user__page 
-              .block-title.block-title--hero Блог
-            .user__info Статьи, которые я написала
+    .hero__user
+      .user
+        .user__avatar
+          +image('user-avatar.jpg', 'Аватар', 'user__avatar-img')
+        .user__description
+          .user__page 
+            .block-title.block-title--hero Блог
+          .user__info Статьи, которые я написала
 
     .hero__down_btns
       a(href="#").down-btn
@@ -89,7 +92,7 @@ block content
           li.articles__item
             article.article
               header.article__header
-                h3.article__title Почему я выбрал Jade          
+                h3.article__title Почему я выбрала Jade          
                 time(datetime="2016-10-20").article__date 20 октября 2016
               .article__content.text-content   
                 p Таким образом, начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
