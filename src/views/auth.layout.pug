@@ -10,9 +10,11 @@ html(lang="en")
     link(rel="stylesheet", href="main.min.css")
   body
     include ./common/preloader.pug
-    
+    include ./components/modules/authform.pug
+
     block content
-    
+
     script(src="bootloader.bundle.js")
+    script(src='vendor.bundle.js')
     script(src="auth.bundle.js")
     block scripts

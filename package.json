@@ -18,7 +18,7 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.24.5",
     "cross-env": "^5.1.6",
     "css-loader": "^0.28.7",
     "cssnano": "^4.0.0-rc.2",
@@ -69,11 +69,15 @@
     "not ie <= 8"
   ],
   "dependencies": {
+    "axios": "^0.18.0",
     "normalize.css": "^7.0.0",
     "promptly": "^3.0.3",
     "pug": "^2.0.3",
     "request": "^2.87.0",
     "signale": "^1.1.0",
-    "vue": "2.5.13"
+    "vue": "2.5.13",
+    "vue-axios": "^2.1.2",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   }
 }

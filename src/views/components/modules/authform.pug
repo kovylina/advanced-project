@@ -1,0 +1,25 @@
+script(type="text/x-template")#form-auth 
+  div.form-auth
+    .form-auth__edit
+      each item in [['text', 'Логин','form-login','form-auth__input--login', 'user.name'], ['password', 'Пароль', 'form-password', 'form-auth__input--password','user.password']]
+        .form-auth__row
+          input.form-auth__input(type=`${item[0]}`, placeholder=`${item[1]}`, id=`${item[2]}`, name=`${item[2]}`, class=`${item[3]}`, v-model=`${item[4]}`)
+    .form-auth__checks
+      .form-auth__row
+        label.form-auth-check.form-auth-checkbox
+          input.form-auth-check__input(type="checkbox", name="capcha")
+          span.form-auth-check__style
+          span.form-auth-check__title#human(name="human", value="1") Я человек
+      h5.form-auth__question Вы точно не робот?
+      .form-auth__row  
+        label.form-auth-check
+          input.form-auth-check__input(type="radio", name="sure")
+          span.form-auth-check__style
+          span.form-auth-check__title#sure-yes(name="sure-yes", value="1") Да
+        label.form-auth-check
+          input.form-auth-check__input(type="radio", name="sure")
+          span.form-auth-check__style
+          span.form-auth-check__title#sure-no(name="sure-no", value="1") Не уверен                    
+    .form-auth__btn
+      button.form-auth__button.form-auth__button-back.form-auth__button--border-right На главную
+      button.form-auth__button(@click="login") Войти  
